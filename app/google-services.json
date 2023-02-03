@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509167913588",
+    "project_id": "carket-car-market",
+    "storage_bucket": "carket-car-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509167913588:android:788d90b275a0600cc15f21",
+        "android_client_info": {
+          "package_name": "com.carket.carket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509167913588-tj1umhuloeelccfhkj3pgpkr97so500s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRKovOz5V8L3p3cJlglJVh6rjJibW-ugk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509167913588-tj1umhuloeelccfhkj3pgpkr97so500s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
