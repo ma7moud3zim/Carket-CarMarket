@@ -3,7 +3,7 @@ package com.carket.carket
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ChooserActivity : BasicActivity() {
+class ChooserActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
