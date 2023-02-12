@@ -1,6 +1,5 @@
 package com.carket.carket
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class ChooserActivity : BaseActivity() {

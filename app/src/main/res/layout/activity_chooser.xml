@@ -30,6 +30,9 @@
         android:layout_height="51dp"
         android:background="@drawable/roundbtn"
         android:text="@string/cusStr"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
 
         app:layout_constraintBottom_toTopOf="@+id/goToPub"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +46,10 @@
         android:layout_height="51dp"
         android:background="@drawable/roundbtn"
         android:text="@string/pubStr"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20sp"
+
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
