@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerLogin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login for Customer"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/midnight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/usernameIn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+     />
+
+    <EditText
+        android:id="@+id/passIn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:textColorHint="@color/grayb"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:autofillHints="password"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="380dp"
+        android:layout_centerHorizontal="true"
+     />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/roundbtn"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_centerHorizontal="true"
+        android:text="Don't have an account yet?"
+        android:textSize="18dp"
+        />
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:background="@drawable/roundbtn_drkclr"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>
