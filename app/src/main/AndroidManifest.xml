@@ -12,15 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Carket"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SignCustomer"
+            android:exported="false" />
         <activity
             android:name=".CustomerLogin"
             android:exported="false" />
-
         <activity
             android:name=".PublisherLogin"
             android:exported="false" />
-
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -33,19 +33,12 @@
 
         <activity
             android:name=".ChooserActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".BaseActivity"
-            android:exported="false"
-            />
-
+            android:exported="false" />
     </application>
 
 </manifest>
