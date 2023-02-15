@@ -7,6 +7,7 @@
     tools:context=".SignCustomer">
 
     <TextView
+        android:id="@+id/titleSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up Customer"
@@ -15,13 +16,32 @@
         android:textStyle="bold"
         android:textColor="@color/midnight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="90dp"
         />
+
     <EditText
-        android:id="@+id/usernamePb"
+        android:id="@+id/nameCustSign"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:hint="Name"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="12dp"
+        android:layout_below="@id/titleSign"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        />
 
+    <EditText
+        android:id="@+id/usernameCustSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/nameCustSign"
         android:hint="Username"
         android:background="@drawable/field_design"
         android:paddingStart="12dp"
@@ -31,14 +51,91 @@
         android:inputType="text"
         android:drawableStart="@drawable/ic_mail"
         android:drawablePadding="12dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         />
 
+    <EditText
+        android:id="@+id/mailCustSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/usernameCustSign"
+        android:hint="E-mail"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="emailAddress"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
 
+    <EditText
+        android:id="@+id/passCustSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/mailCustSign"
+        android:hint="Password"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="password"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
 
+    <EditText
+        android:id="@+id/phoneCustSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passCustSign"
+        android:hint="Phone"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="phone"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/locCustSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/phoneCustSign"
+        android:hint="Location"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="null"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
 
-
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_below="@+id/locCustSign"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbtn"
+        android:textColor="@color/white"
+        />
 
 
 </RelativeLayout>

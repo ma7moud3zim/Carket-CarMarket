@@ -70,6 +70,7 @@
         android:textSize="18dp"
         />
     <Button
+        android:id="@+id/goToPubSign"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="Sign up"

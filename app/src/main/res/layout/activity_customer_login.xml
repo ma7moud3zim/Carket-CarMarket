@@ -54,6 +54,7 @@
      />
 
     <Button
+        android:id="@+id/loginCus"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="login"
@@ -71,7 +72,10 @@
         android:text="Don't have an account yet?"
         android:textSize="18dp"
         />
+
+
     <Button
+        android:id="@+id/goToCusSign"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="Sign up"
