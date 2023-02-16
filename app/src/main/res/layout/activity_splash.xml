@@ -21,11 +21,12 @@
     </TextView>
 
     <ProgressBar
-        android:layout_width="40sp"
-        android:layout_height="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
         android:outlineAmbientShadowColor="@color/midnight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="800sp"
+        android:layout_marginTop="600sp"
         android:id="@+id/load"
         />
 
