@@ -19,6 +19,8 @@ class SplashActivity : BaseActivity() {
         val intent = Intent(this@SplashActivity, ChooserActivity::class.java)
         startActivity(intent)
 
+
+
     }
 
 }
