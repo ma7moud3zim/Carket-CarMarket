@@ -35,6 +35,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".SignPublisher"
+            android:exported="true"/>
+
+        <activity
             android:name=".CustomerLogin"
             android:exported="true" />
 

@@ -1,6 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SignPublisher">
+    <TextView
+        android:id="@+id/titleSignPb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up for Publisher"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/midnight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/namePbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="12dp"
+        android:layout_below="@id/titleSignPb"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/usernamePbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/namePbSign"
+        android:hint="Username"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/mailPbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/usernamePbSign"
+        android:hint="E-mail"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="emailAddress"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/passPbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/mailPbSign"
+        android:hint="Password"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="password"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/phonePbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passPbSign"
+        android:hint="Phone"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="phone"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/locPbSign"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/phonePbSign"
+        android:hint="Location"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="null"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_below="@+id/locPbSign"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbtn_drkclr"
+        android:textColor="@color/white"
+        />
+
+
+</RelativeLayout>
