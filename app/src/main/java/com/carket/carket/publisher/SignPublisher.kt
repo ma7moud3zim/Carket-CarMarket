@@ -29,7 +29,7 @@ class SignPublisher : BaseActivity() {
             val phone = findViewById<EditText>(R.id.phonePbSign).text.toString()
             val loc = findViewById<EditText>(R.id.locPbSign).text.toString()
 
-            database = FirebaseDatabase.getInstance().getReference("Publishers")
+            database = FirebaseDatabase.getInstance().getReference("Publisher")
             val pub = Customer(name,usernm,mail,pass,phone,loc)
 
 
