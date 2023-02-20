@@ -31,19 +31,19 @@
             android:exported="true" />
 
         <activity
-            android:name=".SignCustomer"
+            android:name=".customer.SignCustomer"
             android:exported="true" />
 
         <activity
-            android:name=".SignPublisher"
+            android:name=".publisher.SignPublisher"
             android:exported="true"/>
 
         <activity
-            android:name=".CustomerLogin"
+            android:name=".customer.CustomerLogin"
             android:exported="true" />
 
         <activity
-            android:name=".PublisherLogin"
+            android:name=".publisher.PublisherLogin"
             android:exported="true" />
 
     </application>

@@ -1,7 +1,8 @@
-package com.carket.carket
+package com.carket.carket.publisher
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.carket.carket.BaseActivity
+import com.carket.carket.R
 
 class SignPublisher : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

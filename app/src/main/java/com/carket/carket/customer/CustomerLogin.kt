@@ -1,9 +1,10 @@
-package com.carket.carket
+package com.carket.carket.customer
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.carket.carket.BaseActivity
+import com.carket.carket.R
 
 class CustomerLogin : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
