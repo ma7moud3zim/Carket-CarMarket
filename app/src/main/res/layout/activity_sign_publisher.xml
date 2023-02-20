@@ -125,6 +125,7 @@
         />
 
     <Button
+        android:id="@+id/signPub"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="Sign up"

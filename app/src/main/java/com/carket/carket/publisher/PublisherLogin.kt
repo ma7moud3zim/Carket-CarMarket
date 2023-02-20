@@ -13,8 +13,8 @@ class PublisherLogin : BaseActivity() {
 
 
         // Go to SignUp a new Publisher
-        val goToCusSign = findViewById<Button>(R.id.goToPubSign)
-        goToCusSign.setOnClickListener {
+        val goToPubSign = findViewById<Button>(R.id.goToPubSign)
+        goToPubSign.setOnClickListener {
             val intent = Intent(this@PublisherLogin, SignPublisher::class.java)
             startActivity(intent)
         }
