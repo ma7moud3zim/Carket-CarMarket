@@ -3,6 +3,8 @@ package com.carket.carket
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import com.carket.carket.customer.CustomerLogin
+import com.carket.carket.publisher.PublisherLogin
 
 class ChooserActivity : BaseActivity() {
 
