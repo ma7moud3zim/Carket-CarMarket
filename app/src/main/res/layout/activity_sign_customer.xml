@@ -38,7 +38,7 @@
         />
 
     <EditText
-        android:id="@+id/usernameCustSign"
+        android:id="@+id/usrnmCustSign"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_below="@id/nameCustSign"
@@ -59,7 +59,7 @@
         android:id="@+id/mailCustSign"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@id/usernameCustSign"
+        android:layout_below="@id/usrnmCustSign"
         android:hint="E-mail"
         android:background="@drawable/field_design"
         android:paddingStart="12dp"
@@ -127,6 +127,7 @@
         />
 
     <Button
+        android:id="@+id/SignBtn"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="Sign up"

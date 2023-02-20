@@ -28,7 +28,7 @@
 
         <activity
             android:name=".BaseActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".SignCustomer"
@@ -44,7 +44,7 @@
 
         <activity
             android:name=".PublisherLogin"
-            android:exported="false" />
+            android:exported="true" />
 
     </application>
 
