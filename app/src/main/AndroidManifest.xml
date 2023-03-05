@@ -18,32 +18,30 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ChooserActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".BaseActivity"
             android:exported="true" />
-
         <activity
             android:name=".customer.SignCustomer"
             android:exported="true" />
-
         <activity
             android:name=".publisher.SignPublisher"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".customer.CustomerLogin"
             android:exported="true" />
-
         <activity
             android:name=".publisher.PublisherLogin"
+            android:exported="true" />
+        <activity
+            android:name=".customer.HomeActivityCust"
             android:exported="true" />
 
     </application>
