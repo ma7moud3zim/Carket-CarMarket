@@ -37,7 +37,7 @@ class CustomerLogin : BaseActivity() {
     }
     private fun check(userName:String , pass:String){
         database = FirebaseDatabase.getInstance().getReference("Custs")
-        database.child("sharmy").get().addOnSuccessListener {
+        database.child(userName).get().addOnSuccessListener {
             if(it.exists()){
                 val fpass = it.child("pass").value
 
