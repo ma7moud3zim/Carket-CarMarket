@@ -2,5 +2,8 @@
     <string name="app_name">Carket</string>
     <string name="cusStr">Customer</string>
     <string name="pubStr">Publisher</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
 
 </resources>

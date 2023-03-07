@@ -32,10 +32,10 @@ class SignCustomer : BaseActivity() {
 
 
             database.child(usernm).setValue(cust).addOnSuccessListener {
-                Toast.makeText(this, "Successfully saved" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Welcome! You are signed Up." , Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener{
-                Toast.makeText(this, "Faaailed" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Sign up Failed" , Toast.LENGTH_SHORT).show()
                 }
         }
 

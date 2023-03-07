@@ -11,7 +11,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class CustomerLogin : BaseActivity() {
-    lateinit var database : DatabaseReference
+    private lateinit var database : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_login)
@@ -31,7 +31,7 @@ class CustomerLogin : BaseActivity() {
             if(usernm.isEmpty() || pass.isEmpty()){
                 Toast.makeText(this, "Please Type the username and the password", Toast.LENGTH_SHORT).show()
             }else{
-                check(usernm , pass);
+                check(usernm , pass)
             }
         }
     }
@@ -41,7 +41,7 @@ class CustomerLogin : BaseActivity() {
             if(it.exists()){
                 val fpass = it.child("pass").value
 
-                if(pass.equals(fpass)){
+                if(pass == fpass){
                     val intent = Intent(this@CustomerLogin, HomeActivityCust::class.java)
                     startActivity(intent)
                 }else{
