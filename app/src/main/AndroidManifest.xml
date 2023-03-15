@@ -43,6 +43,9 @@
         <activity
             android:name=".customer.HomeActivityCust"
             android:exported="true" />
+        <activity
+            android:name=".publisher.HomePublisher"
+            android:exported="true" />
 
     </application>
 
