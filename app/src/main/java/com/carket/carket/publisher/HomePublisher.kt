@@ -27,11 +27,11 @@ class HomePublisher:BaseActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
 
-                R.id.profilepub -> Toast.makeText(this, "profile clicked", Toast.LENGTH_SHORT)
+                R.id.profilepub -> Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT)
                     .show()
-                R.id.favrpub -> Toast.makeText(this, "favourite clicked", Toast.LENGTH_SHORT).show()
-                R.id.setpub -> Toast.makeText(this, "favourite clicked", Toast.LENGTH_SHORT).show()
-                R.id.logoutpub -> Toast.makeText(this, "logout clicked", Toast.LENGTH_SHORT).show()
+                R.id.favrpub -> Toast.makeText(this, "Favourite clicked", Toast.LENGTH_SHORT).show()
+                R.id.setpub -> Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                R.id.logoutpub -> Toast.makeText(this, "Logout clicked", Toast.LENGTH_SHORT).show()
             }
 
             true

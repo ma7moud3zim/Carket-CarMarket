@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class SignPublisher : BaseActivity() {
     // The initialize of databaseReference important for inserting data
-    private lateinit var database : DatabaseReference
+    private lateinit var db : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,26 +29,15 @@ class SignPublisher : BaseActivity() {
             val phone = findViewById<EditText>(R.id.phonePbSign).text.toString()
             val loc = findViewById<EditText>(R.id.locPbSign).text.toString()
 
-            database = FirebaseDatabase.getInstance().getReference("Publisher")
+            db = FirebaseDatabase.getInstance().getReference("Publishers")
             val pub = Customer(name,usernm,mail,pass,phone,loc)
 
-
-            database.child(usernm).setValue(pub).addOnSuccessListener {
-                Toast.makeText(this, "Successfully saved" , Toast.LENGTH_SHORT).show()
-
-                // Clearing the EditTexts should changed to the home activity and show text
-                // that saying Welcome to our application or something like that
-                findViewById<EditText>(R.id.namePbSign).getText().clear()
-                findViewById<EditText>(R.id.usernamePbSign).getText().clear()
-                findViewById<EditText>(R.id.mailPbSign).getText().clear()
-                findViewById<EditText>(R.id.passPbSign).getText().clear()
-                findViewById<EditText>(R.id.phonePbSign).getText().clear()
-                findViewById<EditText>(R.id.locPbSign).getText().clear()
+            db.child(usernm).setValue(pub).addOnSuccessListener {
+                Toast.makeText(this, "Welcome! You are signed Up." , Toast.LENGTH_SHORT).show()
             }
                 .addOnFailureListener{
-                    Toast.makeText(this, "Faaailed" , Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Sign up Failed" , Toast.LENGTH_SHORT).show()
                 }
-
         }
 
 

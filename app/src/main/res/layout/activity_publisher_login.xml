@@ -55,6 +55,7 @@
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="login"
+        android:id="@+id/loginpub"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
         android:background="@drawable/roundbtn"
