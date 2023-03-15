@@ -10,25 +10,46 @@
     >
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/Anime"/>
-
+        android:layout_width="89dp"
+        android:layout_height="95dp"
+        android:src="@drawable/buggati" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
+        android:id="@+id/usname"
         android:paddingTop="8dp"
         android:textSize="20sp"
         android:text="Ishaka Shenzai"
         android:textColor="@color/black"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="shenzai@hotmail.com"
+        android:id="@+id/companyname"
+        android:text="Shenzai Automobiles"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/caption"
+        android:text="Buy the car you want, drive the road you want."
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/midnight"/>
+    <TextView
+        android:id="@+id/pubemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="shenzaiautomobiles@hotmail.com"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pubnumber"
+        android:text="Contact Us: +1 xxx xxx xxxx"
+        />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
