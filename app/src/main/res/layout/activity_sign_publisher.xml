@@ -14,7 +14,7 @@
         android:textStyle="bold"
         android:textColor="@color/midnight"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="70dp"
         />
 
     <EditText
@@ -31,15 +31,31 @@
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="12dp"
         android:layout_below="@id/titleSignPb"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         />
-
+    <EditText
+        android:id="@+id/comppb"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Company name"
+        android:background="@drawable/field_design"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="@color/grayb"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:drawableStart="@drawable/shop"
+        android:drawablePadding="12dp"
+        android:layout_below="@id/namePbSign"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
     <EditText
         android:id="@+id/usernamePbSign"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@id/namePbSign"
+        android:layout_below="@id/comppb"
         android:hint="Username"
         android:background="@drawable/field_design"
         android:paddingStart="12dp"

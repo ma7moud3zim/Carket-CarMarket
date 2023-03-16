@@ -23,6 +23,7 @@ class SignPublisher : BaseActivity() {
         // Handling Sign Button
         signBtn.setOnClickListener{
             val name = findViewById<EditText>(R.id.namePbSign).text.toString()
+            val comp=findViewById<EditText>(R.id.comppb).text.toString()
             val usernm = findViewById<EditText>(R.id.usernamePbSign).text.toString().trim()
             val mail = findViewById<EditText>(R.id.mailPbSign).text.toString()
             val pass = findViewById<EditText>(R.id.passPbSign).text.toString()
@@ -30,7 +31,7 @@ class SignPublisher : BaseActivity() {
             val loc = findViewById<EditText>(R.id.locPbSign).text.toString()
 
             db = FirebaseDatabase.getInstance().getReference("Publishers")
-            val pub = Customer(name,usernm,mail,pass,phone,loc)
+            val pub = Customer(name,comp,usernm,mail,pass,phone,loc)
 
             db.child(usernm).setValue(pub).addOnSuccessListener {
                 Toast.makeText(this, "Welcome! You are signed Up." , Toast.LENGTH_SHORT).show()
