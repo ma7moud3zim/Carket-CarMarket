@@ -1,6 +1,5 @@
 package com.carket.carket.customer
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -11,7 +10,7 @@ import com.carket.carket.R
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivityCust : BaseActivity() {
-    lateinit var toggle : ActionBarDrawerToggle
+    private lateinit var toggle : ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_cust)

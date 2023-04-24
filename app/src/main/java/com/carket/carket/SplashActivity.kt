@@ -10,6 +10,7 @@ class SplashActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        // todo
         /* Check if the user logged in
                  True: fetch data and show it in home activity
                  False: redirect to chooser activity
@@ -18,8 +19,6 @@ class SplashActivity : BaseActivity() {
         // redirecting to the chooser activity "temporarily"
         val intent = Intent(this@SplashActivity, ChooserActivity::class.java)
         startActivity(intent)
-
-
 
     }
 

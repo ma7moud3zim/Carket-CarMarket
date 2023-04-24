@@ -29,11 +29,13 @@ class PublisherLogin : BaseActivity() {
         logn.setOnClickListener{
             val usernm = findViewById<EditText>(R.id.usernamePb).text.toString().trim()
             val pass = findViewById<EditText>(R.id.passPb).text.toString().trim()
+
             if(usernm.isEmpty() || pass.isEmpty()){
                 Toast.makeText(this, "Please Type the username and the password", Toast.LENGTH_SHORT).show()
             }else{
                 check(usernm , pass)
             }
+
         }
     }
     private fun check(userName:String , pass:String){
