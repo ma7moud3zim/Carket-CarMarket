@@ -26,11 +26,13 @@
         android:background="@color/grayb"
         android:orientation="horizontal"
         >
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_menu"
             android:layout_marginTop="5sp"
+            android:contentDescription="maneImage"
             />
 
         <TextView
@@ -45,7 +47,7 @@
             android:textStyle="bold"
              />
     </LinearLayout>
-
+        <!-- todo: Favaourite list-->
         <ScrollView
             android:id="@+id/favScroll"
             android:layout_width="match_parent"
@@ -64,6 +66,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,29 +77,59 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <androidx.core.widget.NestedScrollView
-                    android:id="@+id/mainCateg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:itemCount="1" />
+
             </LinearLayout>
         </ScrollView>
 
-        <TextView
+        <LinearLayout
             android:id="@+id/recCars"
             android:layout_width="match_parent"
             android:layout_height="400sp"
-            android:text="  Recent Cars"
-            android:fontFamily="monospace"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/favScroll"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            android:orientation="horizontal"
+            >
 
+
+            <ScrollView
+                android:id="@+id/carViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recCarsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="  Recent Cars"
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mainCateg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="10"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/car_item_card_view"
+                        />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
