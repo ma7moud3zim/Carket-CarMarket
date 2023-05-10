@@ -8,8 +8,8 @@
     tools:context=".SplashActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
+        android:layout_width="350sp"
+        android:layout_height="350sp"
         android:layout_margin="10sp"
         app:cardBackgroundColor="@color/babyblue"
         app:cardCornerRadius="10sp"
@@ -20,32 +20,41 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imgDsh"
-                android:layout_width="70sp"
-                android:layout_height="70sp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="-10sp"
-                android:layout_marginRight="10sp"
+                android:id="@+id/carImage"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:src="@drawable/buggati"
                 />
-           <!-- android:src="@drawable/somestuff"
-             todo: get the page of the car and put it here item by item-->
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="40sp"
+                android:layout_marginTop="255sp"
+                >
 
             <TextView
-                android:layout_width="match_parent"
                 android:id="@+id/carModel"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-black"
-                android:maxEms="10"
-                android:maxLines="2"
-                android:padding="10sp"
                 android:text="Car Model"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:gravity="center"
                 />
+
+                <TextView
+                    android:id="@+id/carPrice"
+                    android:text="100$"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
