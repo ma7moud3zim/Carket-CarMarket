@@ -41,6 +41,8 @@ class HomeActivityCust : BaseActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
+        // This is fake stuff for the navigationBar
         navView.setNavigationItemSelectedListener{
             when(it.itemId){
                 R.id.profileCust -> Toast.makeText(this, "profile clicked", Toast.LENGTH_SHORT).show()
@@ -52,6 +54,7 @@ class HomeActivityCust : BaseActivity() {
         }
     }
 
+    // This function that gets the cars from Firebase
     private fun getCars(){
         database = FirebaseDatabase.getInstance().getReference("Cars")
 
@@ -63,7 +66,7 @@ class HomeActivityCust : BaseActivity() {
                         val curCar = carSnap.getValue(Car::class.java)
                         carArrayList.add(curCar!!)
                     }
-                    val mAdapater = carAdapter(carArrayList)
+                    val mAdapater = carAdapter(this@HomeActivityCust, carArrayList)
                     carRV.adapter = mAdapater
                 }
             }

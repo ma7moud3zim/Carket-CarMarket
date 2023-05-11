@@ -1,14 +1,17 @@
 package com.carket.carket
 
+import android.content.Context
 import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.carket.carket.*
 
-class carAdapter(private val carArrayList : ArrayList<Car>):
+class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<Car>):
     RecyclerView.Adapter<carAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -21,6 +24,8 @@ class carAdapter(private val carArrayList : ArrayList<Car>):
         holder.curCarModel.text = currentCar.title+" "+currentCar.model
         holder.curCarPrice.text = currentCar.price
         // Todo: show the image using Glide or any other method
+        // using glide to display the image in RecyclerView
+        Glide.with(ctx).load(carArrayList[position].imageId).into(holder.curCarImage)
     }
 
     override fun getItemCount(): Int {
@@ -31,8 +36,7 @@ class carAdapter(private val carArrayList : ArrayList<Car>):
         // TODO:  show the things of the car on the cardView
         var curCarModel :TextView = itemView.findViewById(R.id.carModel)
         val curCarPrice :TextView = itemView.findViewById(R.id.carPrice)
-
-        // val curCarImage : Image = itemView.findViewById(R.id.carImage)
+        val curCarImage : ImageView = itemView.findViewById(R.id.carImage)
     }
 
 }
