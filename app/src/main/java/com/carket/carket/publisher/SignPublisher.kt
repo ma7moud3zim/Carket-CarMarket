@@ -31,7 +31,7 @@ class SignPublisher : BaseActivity() {
             val loc = findViewById<EditText>(R.id.locPbSign).text.toString()
 
             db = FirebaseDatabase.getInstance().getReference("Publishers")
-            val pub = Customer(name,comp,usernm,mail,pass,phone,loc)
+            val pub = Publisher(name,comp,usernm,mail,pass,phone,loc)
 
             db.child(usernm).setValue(pub).addOnSuccessListener {
                 Toast.makeText(this, "Welcome! You are signed Up." , Toast.LENGTH_SHORT).show()

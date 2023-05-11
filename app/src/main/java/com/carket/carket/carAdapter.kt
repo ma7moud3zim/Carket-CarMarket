@@ -2,11 +2,13 @@ package com.carket.carket
 
 import android.content.Context
 import android.media.Image
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.carket.carket.*
@@ -21,11 +23,11 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
 
     override fun onBindViewHolder(holder: carAdapter.ViewHolder, position: Int) {
         val currentCar = carArrayList[position]
-        holder.curCarModel.text = currentCar.title+" "+currentCar.model
+        holder.curCarModel.text = currentCar.title+" "+currentCar.model+"$"
         holder.curCarPrice.text = currentCar.price
         // Todo: show the image using Glide or any other method
         // using glide to display the image in RecyclerView
-        Glide.with(ctx).load(carArrayList[position].imageId).into(holder.curCarImage)
+        Glide.with(ctx).load(carArrayList[position].imageid).into(holder.curCarImage)
     }
 
     override fun getItemCount(): Int {
