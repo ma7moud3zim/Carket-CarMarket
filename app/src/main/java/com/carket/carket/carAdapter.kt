@@ -16,6 +16,8 @@ import com.carket.carket.*
 class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<Car>):
     RecyclerView.Adapter<carAdapter.ViewHolder>(){
 
+    var listner: OnItemClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.car_item_card_view , parent , false)
         return ViewHolder(itemView)
@@ -28,6 +30,11 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         // Todo: show the image using Glide or any other method
         // using glide to display the image in RecyclerView
         Glide.with(ctx).load(carArrayList[position].imageid).into(holder.curCarImage)
+
+        holder.itemView.rootView.setOnClickListener {
+            listner!!.onClicked(carArrayList[position].car_id)
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -39,6 +46,12 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         var curCarModel :TextView = itemView.findViewById(R.id.carModel)
         val curCarPrice :TextView = itemView.findViewById(R.id.carPrice)
         val curCarImage : ImageView = itemView.findViewById(R.id.carImage)
+    }
+    public fun setClickListner(listen:OnItemClickListener){
+        listner = listen
+    }
+    interface OnItemClickListener{
+        fun onClicked(carTitle :String?)
     }
 
 }
