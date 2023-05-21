@@ -1,17 +1,13 @@
 package com.carket.carket
 
 import android.content.Context
-import android.media.Image
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.carket.carket.*
 
 class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<Car>):
     RecyclerView.Adapter<carAdapter.ViewHolder>(){
@@ -23,7 +19,7 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         return ViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: carAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentCar = carArrayList[position]
         holder.curCarModel.text = currentCar.title+" "+currentCar.model+"$"
         holder.curCarPrice.text = currentCar.price
@@ -47,11 +43,11 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         val curCarPrice :TextView = itemView.findViewById(R.id.carPrice)
         val curCarImage : ImageView = itemView.findViewById(R.id.carImage)
     }
-    public fun setClickListner(listen:OnItemClickListener){
+    fun setClickListner(listen:OnItemClickListener){
         listner = listen
     }
     interface OnItemClickListener{
-        fun onClicked(carTitle :String?)
+        fun onClicked(car_id :String?)
     }
 
 }

@@ -3,7 +3,6 @@ package com.carket.carket.customer
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.AbsListView.RecyclerListener
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -18,7 +17,8 @@ class HomeActivityCust : BaseActivity() {
     private lateinit var toggle : ActionBarDrawerToggle
     private lateinit var database : DatabaseReference
     private lateinit var carRV : RecyclerView
-    private lateinit var carArrayList:ArrayList<Car>
+    lateinit var carArrayList:ArrayList<Car>
+    var clicked:String = ""
     private lateinit var carAdp : carAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +49,7 @@ class HomeActivityCust : BaseActivity() {
         }
 
         getCars()
-        carArrayList = arrayListOf<Car>()
+        carArrayList = arrayListOf()
         carAdp = carAdapter(this@HomeActivityCust,carArrayList)
         carAdp.setClickListner(onClicked)
     }
@@ -60,13 +60,19 @@ class HomeActivityCust : BaseActivity() {
 
 
     private val onClicked = object : carAdapter.OnItemClickListener{
-        override fun onClicked(carTitle: String?) {
-            Toast.makeText(this@HomeActivityCust,"Ay 7aha depug kda" , Toast.LENGTH_SHORT).show()
+        override fun onClicked(car_id: String?) {
+            Toast.makeText(this@HomeActivityCust,car_id , Toast.LENGTH_SHORT).show()
+            clicked = car_id!!
             getCarDetails()
         }
     }
-
-
+    // To go to CarView of clicked card
+    private fun getCarDetails(){
+        val intent = Intent(this@HomeActivityCust, CarView::class.java)
+        intent.putExtra("id",clicked)
+        startActivity(intent)
+    }
+    
     // This function that gets the cars from Firebase
     private fun getCars(){
         database = FirebaseDatabase.getInstance().getReference("Cars")
@@ -91,10 +97,7 @@ class HomeActivityCust : BaseActivity() {
         })
 
     }
-    private fun getCarDetails(){
-        val intent = Intent(this@HomeActivityCust, CarView::class.java)
-        startActivity(intent)
-    }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return true
