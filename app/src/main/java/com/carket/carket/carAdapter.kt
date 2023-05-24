@@ -28,7 +28,7 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         Glide.with(ctx).load(carArrayList[position].imageid).into(holder.curCarImage)
 
         holder.itemView.rootView.setOnClickListener {
-            listner!!.onClicked(carArrayList[position].car_id)
+            listner!!.onClicked(position)
         }
 
     }
@@ -47,7 +47,7 @@ class carAdapter(private val ctx: Context, private val carArrayList : ArrayList<
         listner = listen
     }
     interface OnItemClickListener{
-        fun onClicked(car_id :String?)
+        fun onClicked(position :Int?)
     }
 
 }

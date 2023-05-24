@@ -59,13 +59,10 @@ class HomeActivityCust : BaseActivity() {
 
 
     private val onClicked = object : carAdapter.OnItemClickListener{
-        override fun onClicked(car_id: String?) {
-            val clicked = car_id!!.toInt()-1
-            Toast.makeText(this@HomeActivityCust,car_id , Toast.LENGTH_SHORT).show()
-
-//            val intent = Intent(this@HomeActivityCust, CarView::class.java)
-//            intent.putExtra("carObject",carArrayList[clicked])
-//            startActivity(intent)
+        override fun onClicked(pos: Int?) {
+            val intent = Intent(this@HomeActivityCust, CarView::class.java)
+            intent.putExtra("carObject",carArrayList[pos!!])
+            startActivity(intent)
         }
     }
     // To go to CarView of clicked card

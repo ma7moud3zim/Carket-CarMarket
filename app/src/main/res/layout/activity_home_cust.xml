@@ -46,11 +46,12 @@
             android:textStyle="bold"
              />
     </LinearLayout>
+
         <!-- todo: Favaourite list-->
         <LinearLayout
             android:id="@+id/favScroll"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
+            android:layout_height="140sp"
             android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -58,25 +59,27 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintBottom_toTopOf="@id/recCars"
+            android:orientation="vertical"
             >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Favourite Cars"
                     android:layout_marginStart="20sp"
+                    android:paddingBottom="10dp"
                     android:fontFamily="monospace"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
+            <View android:id="@+id/rect"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bluegreen"
+                android:visibility="visible"/>
 
-            </LinearLayout>
         </LinearLayout>
 
         <TextView
