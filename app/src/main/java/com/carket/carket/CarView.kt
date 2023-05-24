@@ -12,19 +12,19 @@ class CarView : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_view)
+
         // Todo("Retrieve CarData From Firebase To Display it")
 
-        //var id = intent.getStringExtra("id")!!.toInt()
+        val cur: Car? = intent.getParcelableExtra("carObject" )
         //id=0
-        //showData(id)
+        showData(cur)
     }
 
-    private fun showData(id:Int){
-        val nw = HomeActivityCust()
-        Toast.makeText(this, nw.carArrayList.size, Toast.LENGTH_SHORT).show()
+    private fun showData(cur:Car?){
+        Toast.makeText(this, "I am here", Toast.LENGTH_SHORT).show()
         //val car = nw.carArrayList[id]
-        val curImage:ImageView = findViewById(R.id.carImage)
-        //Glide.with(this).load(car.imageid).into(curImage)
+        val curImage:ImageView = findViewById(R.id.img_item)
+        Glide.with(this).load(cur!!.imageid).into(curImage)
     }
 
 }

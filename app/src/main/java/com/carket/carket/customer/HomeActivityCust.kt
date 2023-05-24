@@ -18,7 +18,6 @@ class HomeActivityCust : BaseActivity() {
     private lateinit var database : DatabaseReference
     private lateinit var carRV : RecyclerView
     lateinit var carArrayList:ArrayList<Car>
-    var clicked:String = ""
     private lateinit var carAdp : carAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +25,11 @@ class HomeActivityCust : BaseActivity() {
         carRV = findViewById(R.id.carRV)
         carRV.layoutManager = LinearLayoutManager(this)
         carRV.setHasFixedSize(true)
+        getCars()
+
+        carArrayList = arrayListOf()
+        carAdp = carAdapter(this@HomeActivityCust,carArrayList)
+        carAdp.setClickListner(onClicked)
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.homeCustomer)
@@ -47,11 +51,6 @@ class HomeActivityCust : BaseActivity() {
             }
             true
         }
-
-        getCars()
-        carArrayList = arrayListOf()
-        carAdp = carAdapter(this@HomeActivityCust,carArrayList)
-        carAdp.setClickListner(onClicked)
     }
     override fun onResume() {
         super.onResume()
@@ -61,17 +60,16 @@ class HomeActivityCust : BaseActivity() {
 
     private val onClicked = object : carAdapter.OnItemClickListener{
         override fun onClicked(car_id: String?) {
+            val clicked = car_id!!.toInt()-1
             Toast.makeText(this@HomeActivityCust,car_id , Toast.LENGTH_SHORT).show()
-            clicked = car_id!!
-            getCarDetails()
+
+//            val intent = Intent(this@HomeActivityCust, CarView::class.java)
+//            intent.putExtra("carObject",carArrayList[clicked])
+//            startActivity(intent)
         }
     }
     // To go to CarView of clicked card
-    private fun getCarDetails(){
-        val intent = Intent(this@HomeActivityCust, CarView::class.java)
-        intent.putExtra("id",clicked)
-        startActivity(intent)
-    }
+
     
     // This function that gets the cars from Firebase
     private fun getCars(){
@@ -87,6 +85,8 @@ class HomeActivityCust : BaseActivity() {
                     }
 
                 }
+                carRV.setHasFixedSize(true);
+                carRV.layoutManager = LinearLayoutManager(this@HomeActivityCust)
             }
 
             override fun onCancelled(error: DatabaseError) {
