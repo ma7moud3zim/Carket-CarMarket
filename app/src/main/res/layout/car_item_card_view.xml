@@ -8,7 +8,7 @@
     tools:context=".SplashActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350sp"
+        android:layout_width="400sp"
         android:layout_height="350sp"
         android:layout_margin="10sp"
         app:cardBackgroundColor="@color/babyblue"

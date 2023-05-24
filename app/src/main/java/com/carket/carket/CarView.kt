@@ -17,6 +17,7 @@ class CarView : BaseActivity() {
         setContentView(R.layout.activity_car_view)
 
         val cur: Car? = intent.getParcelableExtra("carObject" )
+
         showData(cur)
     }
 

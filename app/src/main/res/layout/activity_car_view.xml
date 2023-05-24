@@ -112,11 +112,12 @@
                         android:id="@+id/car_details_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="casual"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
                         android:padding="8sp"
                         android:text="loading details.."
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -153,11 +154,12 @@
                         android:id="@+id/tv_instructions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="casual"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
                         android:padding="8sp"
                         android:text="loading instructions.."
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
