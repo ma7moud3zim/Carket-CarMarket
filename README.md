@@ -7,7 +7,7 @@
   #### ▶ Datbase Firebase google.
   #### ▶ ERD for the database.
 
-### If you want to check the tasks of the applicaton click [here](https://docs.google.com/spreadsheets/d/1PLstZH_9uweyiJz60vt2pnx_7Oio-6LjoX3cl1jmW2c/edit?usp=sharing)
+### If you want to check the tasks of the applicaton click [here](https://docs.google.com/spreadsheets/d/1PLstZH_9uweyiJz60vt2pnx_7Oio-6LjoX3cl1jmW2c/htmlview#)
 
 ### Publisher or Customer Activity:
 ![Screenshot from 2023-05-24 19-45-54](https://github.com/ma7moud3zim/Carket-CarMarket/assets/72660571/8ed4bfb8-46a9-4e2a-91b5-a60a41d7075d)
