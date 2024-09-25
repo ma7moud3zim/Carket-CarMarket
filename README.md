@@ -4,7 +4,7 @@
 
 ### Technologies used in The application:
   #### ▶ Programming Language Kotlin.
-  #### ▶ Datbase Firebase google.
+  #### ▶ Database Firebase google.
   #### ▶ ERD for the database.
 
 ### If you want to check the tasks of the applicaton click [here](https://docs.google.com/spreadsheets/d/1PLstZH_9uweyiJz60vt2pnx_7Oio-6LjoX3cl1jmW2c/htmlview#)
